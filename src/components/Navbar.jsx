@@ -35,7 +35,7 @@ const Navbar = () => {
               isOpen &&
            
               <div className=' flex flex-col justify-between tr md:hidden fixed top-0 left-0 bg-white h-full w-full px-4 pt-4'>
-                <div className='flex flex-col  gap-4'>
+                <div className='flex flex-col text-lg gap-4'>
                   <NavLink onClick={toggleMenu} to='/'>Home</NavLink>
                   <NavLink onClick={toggleMenu} to='/about'>About</NavLink>
                   <NavLink onClick={toggleMenu} to='/contact'>Contact</NavLink>
