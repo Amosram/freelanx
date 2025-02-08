@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Roboto", serif;
+}
+
+section {
+    min-height: 100vh;
+}
+
+.text-gd {
+    background: linear-gradient(90deg, rgb(139, 139, 220), #fff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+}
+
+.text-gd-2 {
+    background: linear-gradient(90deg, rgb(89, 89, 188), #0d9228);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+}
+
+.bg-grad {
+    background: linear-gradient(90deg, rgb(139, 139, 220), #5e5894);
+}
+
+.bg-grad-2 {
+    background: linear-gradient(90deg, rgb(139, 139, 220), #4c6ba5);
+}
+
+.hero {
+    background: url('/images/hero-bg.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.active {
+    color: rgb(69, 69, 192);
+}
+
+ul {
+    list-style-type: circle;
+}
