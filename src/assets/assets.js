@@ -30,6 +30,7 @@ export const assets = {
 
 
 export const jobs = [
+
     {
         _id:1,
         title:"Software Engineer",
@@ -40,7 +41,14 @@ export const jobs = [
         location:"Nairobi",
         salary:19,
         career_level: "Experienced",
-        quallification: "Bachelors Degree"
+        quallification: "Bachelors Degree",
+        responsibilities: [
+            "Customer Satisfaction: Deliver fast, effective Services to internal and external customers/stakeholders/departments.",
+            "Compliance: Ensuring preparation, payment, distribution and display of licenses (including Single Business Permits, Music Licenses, Fire Licenses, Branding, Signage etc.) by 31 December of every year.",
+            "Overseeing department budget planning and tracking monthly spend: Prepare on an annual basis and monitor relevant office expenses versus budget",
+            "Customer Satisfaction: Deliver fast, effective Services to internal and external customers/stakeholders/departments.",
+            "Performance Management and Career development: Oversee, mentor, train, and coach junior administrative staff to optimize productivity.",
+        ]
     },
     {
         _id:2,

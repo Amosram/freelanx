@@ -3,14 +3,23 @@ import { NavLink,Link } from 'react-router-dom'
 import Button from './Button'
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { IoClose } from "react-icons/io5";
+import { RiUser4Fill } from "react-icons/ri";
+import { HiUserCircle } from "react-icons/hi";
+import { FaAngleRight } from "react-icons/fa6";
+import { MdLogout } from "react-icons/md";
 
 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [profile, setProfile] = useState(false)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
+  }
+
+  const toggleProfile = () => {
+    setProfile(!profile)
   }
 
   return (
@@ -24,12 +33,35 @@ const Navbar = () => {
                 <NavLink to='/contact'>Contact</NavLink>
             </div>
 
-            
-            <NavLink className='hidden md:flex' to='/login'>
-              <Button buttonText='Login'/>
-            </NavLink>
 
-            <HiOutlineBars3 onClick={toggleMenu} className='text-xl font-medium hover:cursor-pointer md:hidden '/>
+            <div className='flex items-center gap-2'>
+              <div className='relative'>
+                <HiUserCircle onClick={toggleProfile} className='text-[27px] text-gray-500 cursor-pointer'/>
+
+                {
+                  profile &&
+                  <div className='bg-white border shadow-md absolute rounded-md top-full right-0 w-40 flex flex-col gap-2'>
+                    <p className='text-center text-sm border-b-[1px] shadow-sm rounded-md py-2 mb-2'>Amos Rama</p>
+                    {/* <hr className='mb-2'/> */}
+                    <Link to='/profile' onClick={toggleProfile} className='flex items-center gap-1 px-4'>
+                      <span>Profile</span>
+                      <FaAngleRight className='text-[12px]'/>
+                    </Link>
+                    <p onClick={toggleProfile} className='flex items-center gap-1 cursor-pointer px-4 mb-4'>
+                      <MdLogout/>
+                      <span>Logout</span>
+                    </p>
+                  </div>
+                }
+          
+              </div>
+              
+              <NavLink className='hidden md:flex' to='/login'>
+                <Button buttonText='Login'/>
+              </NavLink>
+
+              <HiOutlineBars3 onClick={toggleMenu} className='text-xl font-medium hover:cursor-pointer md:hidden '/>
+            </div>
 
             {
               isOpen &&
