@@ -5,7 +5,7 @@ import { HiUserCircle } from "react-icons/hi";
 const Profile = () => {
   return (
     <div className='min-h-[60vh] md:min-h-[100vh] px-8 py-8'>
-        <div className='border shadow-md min-h-[50vh] px-4 grid grid-cols-1 md:grid-cols-[200px_minmax(900px,_1fr)_100px]'>
+        <div className='border shadow-md min-h-[50vh] px-1 md:px-4 grid grid-cols-1 md:grid-cols-[200px_minmax(900px,_1fr)_100px]'>
             <div className='md:border-r-2 py-4 px-4'>
                 <div className='flex flex-col items-center'>
                     <HiUserCircle className='text-8xl text-gray-500'/>
@@ -21,13 +21,13 @@ const Profile = () => {
                     </div>
                     <div className='grid grid-cols-1 lg:grid-cols-2'>
                         <p className='text-slate-700'>About</p>
-                        <p className='text-slate-900 w-[50%] lg:w-full'>
+                        <p className='text-slate-900 w-full md:w-[50%] lg:w-full'>
                         Passionate and results-driven software engineer with over 2 years of experience in designing, developing, and deploying scalable and efficient software solutions.
                         </p>
                     </div>
                     <div className='grid grid-cols-1 lg:grid-cols-2'>
                         <p className='text-slate-700'>Skills</p>
-                        <ul className='grid grid-cols-3 gap-1 text-slate-900 list-none w-[50%]'>
+                        <ul className='grid grid-cols-3 gap-1 text-slate-900 list-none w-full md:w-[50%] lg:w-full'>
                             <li>React</li>
                             <li>Python</li>
                             <li>Java</li>
