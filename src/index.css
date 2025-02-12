@@ -51,3 +51,12 @@ section {
 ul {
     list-style-type: circle;
 }
+
+
+.close {
+    display: none;
+}
+
+.open {
+    display: block;
+}
