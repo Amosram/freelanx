@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import JobCard from './JobCard';
 import axios from 'axios'
 import {toast} from 'react-toastify'
+import { jobContext } from '../context/JobContext';
 
 const LatestJobs = () => {
     const [jobList, setJobList] = useState([])
+    const {serverUrl} = useContext(jobContext)
 
     const fetchJobs = async () => {
       try {
-        const response = await axios.get("http://localhost:7000/api/jobs/list");
+        const response = await axios.get(serverUrl + "/api/jobs/list");
         if (response.data.success) {
           toast.success(response.data.message)
           setJobList(response.data.allJobs)
