@@ -62,7 +62,7 @@ const Navbar = () => {
                       <div className='bg-white border shadow-md absolute rounded-md top-full right-0 w-40 flex flex-col gap-2 mt-2'>
                       
                       <p className='px-4 flex gap-2 items-center text-sm border-b-[1px] shadow-sm rounded-md py-2 mb-2'>
-                        <span className='border flex items-center justify-center p-2 bg-grad text-gray-50 w-6 h-6 shadow-sm rounded-full font-medium'>{username[0]}</span>
+                        
                         {username}
                       </p>  
                         
