@@ -34,7 +34,7 @@ export const jobs = [
     {
         _id:1,
         title:"Software Engineer",
-        date:formatedDate,
+        date:'21 Feb 2025',
         briefDescription: "Specializing in estate planning and business formation, conducting virtual consultations, and drafting comprehensive estate plans while ensuring compliance with legal standards and providing exceptional client support.",
         remote:"100% Remote",
         site:"Full-Time",

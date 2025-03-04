@@ -60,3 +60,11 @@ ul {
 .open {
     display: block;
 }
+
+.jobCard {
+    transition: all .3s;
+}
+
+.jobCard:hover {
+    border: 1px solid rgb(85, 206, 85);
+}

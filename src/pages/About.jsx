@@ -45,7 +45,7 @@ const About = () => {
               </div>
               <div className='pt-2'>
                 <h2 className='font-medium flex items-center gap-1'>Amos Rama
-                  <MdVerified className='text-orange-900'/>
+                  <MdVerified className='text-purple-700'/>
                 </h2>
                 <h3 className='text-sm font-medium mb-3'>Owner and Lead Software Engineer</h3>
                 <p className='text-sm mb-8'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti deleniti consequatur vel quo? Ipsa odio fugiat ullam? Provident laborum perferendis dolorum fuga debitis.</p>
@@ -71,7 +71,7 @@ const About = () => {
               </div>
               <div className='pt-2'>
                 <h2 className='font-medium flex items-center gap-1'>Amos Rama
-                  <MdVerified className='text-orange-900'/>
+                  <MdVerified className='text-purple-700'/>
                 </h2>
                 <h3 className='text-sm font-medium mb-3'>Owner and Lead Software Engineer</h3>
                 <p className='text-sm mb-8'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti deleniti consequatur vel quo? Ipsa odio fugiat ullam? Provident laborum perferendis dolorum fuga debitis.</p>
