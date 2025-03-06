@@ -1,12 +1,13 @@
 import ceoImg from '../assets/images/ceo-img.png';
-import brand_1 from '../assets/images/samsung-logo-svgrepo-com.svg'
-import brand_2 from '../assets/images/lenovo-svgrepo-com.svg'
-import brand_3 from '../assets/images/hp-svgrepo-com.svg'
-import brand_4 from '../assets/images/microsoft-svgrepo-com.svg'
-import brand_5 from '../assets/images/toshiba-svgrepo-com.svg'
-import brand_6 from '../assets/images/apple-173-svgrepo-com.svg'
-import brand_7 from '../assets/images/dell-2-logo-svgrepo-com.svg'
-import brand_8 from '../assets/images/acer-svgrepo-com.svg'
+import brand_1 from '../assets/images/safaricom.png'
+import brand_2 from '../assets/images/facebook.svg'
+import brand_3 from '../assets/images/amazon.svg'
+import brand_4 from '../assets/images/apple-173-svgrepo-com.svg'
+import brand_5 from '../assets/images/netflix.svg'
+import brand_6 from '../assets/images/google.svg'
+import brand_7 from '../assets/images/microsoft.svg'
+import brand_8 from '../assets/images/ibm.svg'
+
 
 let currentDtae = new Date();
 
