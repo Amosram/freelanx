@@ -37,27 +37,35 @@ const UserMatchedJobs = () => {
             <p className='text-slate-700 text-md mt-2 '>These jobs are displayed based on your profile details </p>
        
         </div>
-
-        <div className='grid sm:grid-cols-2 xl:grid-cols-3 gap-8 mb-16'>
-            {
-                jobList.map((job, index) => (
-                    <JobCard 
-                    key={index} 
-                    id={job._id} 
-                    title={job.jobTitle} 
-                    date={new Date(job.date).toLocaleDateString()} 
-                    remote={job.jobType} 
-                    site={job.site} 
-                    location={job.location} 
-                    qualification={job.qualification} 
-                    career_level={job.career_level} 
-                    salary={job.salary}
-                    responsibilities={job.responsibilities}
-                    briefDescription={job.briefDescription}
-                    />
-                ))
-            }
+        {
+          jobList.length === 0 ? 
+          <div className='flex items-center justify-center h-full mt-20'>
+            <div className='loader-1'></div>
+            <span className='loader-2'></span>
+          </div>
+          :
+          <div className='grid sm:grid-cols-2 xl:grid-cols-3 gap-8 mb-16'>
+          {
+              jobList.map((job, index) => (
+                  <JobCard 
+                  key={index} 
+                  id={job._id} 
+                  title={job.jobTitle} 
+                  date={new Date(job.date).toLocaleDateString()} 
+                  remote={job.jobType} 
+                  site={job.site} 
+                  location={job.location} 
+                  qualification={job.qualification} 
+                  career_level={job.career_level} 
+                  salary={job.salary}
+                  responsibilities={job.responsibilities}
+                  briefDescription={job.briefDescription}
+                  />
+              ))
+          }
         </div>
+        }
+      
 
     </section>
   )

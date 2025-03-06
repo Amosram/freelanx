@@ -32,26 +32,36 @@ const LatestJobs = () => {
             <h1 className='text-slate-950 text-3xl font-medium'>All Latest Jobs For You</h1>
         </div>
 
-        <div className='grid sm:grid-cols-2 xl:grid-cols-3 gap-8'>
-            {
-                jobList.map((job, index) => (
-                    <JobCard 
-                    key={index} 
-                    id={job._id} 
-                    title={job.jobTitle} 
-                    date={new Date(job.date).toLocaleDateString()} 
-                    remote={job.jobType} 
-                    site={job.site} 
-                    location={job.location} 
-                    qualification={job.qualification} 
-                    career_level={job.career_level} 
-                    salary={job.salary}
-                    responsibilities={job.responsibilities}
-                    briefDescription={job.briefDescription}
-                    />
-                ))
-            }
+        {
+          jobList.length === 0 ? 
+          <div className='flex items-center justify-center h-full mt-20'>
+            <div className='loader-1'></div>
+            <span className='loader-2'></span>
+          </div>
+          :
+          <div className='grid sm:grid-cols-2 xl:grid-cols-3 gap-8'>
+          {
+              jobList.map((job, index) => (
+                  <JobCard 
+                  key={index} 
+                  id={job._id} 
+                  title={job.jobTitle} 
+                  date={new Date(job.date).toLocaleDateString()} 
+                  remote={job.jobType} 
+                  site={job.site} 
+                  location={job.location} 
+                  qualification={job.qualification} 
+                  career_level={job.career_level} 
+                  salary={job.salary}
+                  responsibilities={job.responsibilities}
+                  briefDescription={job.briefDescription}
+                  />
+              ))
+          }
         </div>
+        }
+
+       
 
     </section>
   )

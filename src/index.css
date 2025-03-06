@@ -68,3 +68,31 @@ ul {
 .jobCard:hover {
     border: 1px solid rgb(85, 206, 85);
 }
+
+.loader-1 {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 3px solid rgb(220, 219, 219);
+    border-radius: 50%;
+    position: relative;
+}
+
+.loader-2 {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-right: 3px solid purple;
+    border-radius: 50%;
+    position: absolute;
+    animation: spin .7s ease-out infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+      to {
+        transform: rotate(360deg);
+    }
+}

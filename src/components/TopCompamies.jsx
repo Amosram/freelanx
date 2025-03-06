@@ -16,7 +16,7 @@ const Category = () => {
           <img className='w-16 h-10' src={assets.brand_2} alt="brand image"/>
         </div>
         <div className='bg-purple-100 rounded-[30px] border py-2 shadow-sm flex justify-center items-center'>
-          <img className='w-16 h-10' src={assets.brand_3} alt="brand image"/>
+          <img className='w-16 h-8' src={assets.brand_3} alt="brand image"/>
         </div>
         <div className='bg-purple-100 rounded-[30px] border py-2 shadow-sm flex justify-center items-center'>
           <img className='w-16 h-10' src={assets.brand_4} alt="brand image"/>
