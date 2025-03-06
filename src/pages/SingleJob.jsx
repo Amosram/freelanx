@@ -78,7 +78,7 @@ const SingleJob = () => {
   }, [jobId, jobs])
 
   return jobData ? (
-    <div className='px-8 min-h-[60vh]'>
+    <section className='px-8'>
         <div className='min-h-[50vh] border mt-4 shadow-md px-4 py-4'>
           <div>
             <p className='text-lg md:text-2xl font-medium text-gd-2 mb-4'>{jobData.jobTitle}</p>
@@ -221,10 +221,13 @@ const SingleJob = () => {
           </div>
           
         </div>
-    </div>
+    </section>
   ): (
-    <div className="opacity-0">
-      No jobs
+    <div className="flex items-center justify-center min-h-[70vh]">
+      <div className='flex items-center justify-center h-full'>
+          <div className='loader-1'></div>
+          <span className='loader-2'></span>
+      </div>
     </div>
   );
 };
