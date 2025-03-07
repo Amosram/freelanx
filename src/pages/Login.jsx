@@ -2,15 +2,24 @@ import React, {useContext, useEffect, useState} from 'react'
 import { jobContext } from '../context/JobContext';
 import axios from "axios";
 import {toast} from "react-toastify";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AiOutlineEye } from "react-icons/ai";
+import { AiOutlineEyeInvisible } from "react-icons/ai";
+
 
 const Login = () => {
   const [currentState, setCurrentState] = useState("Login");
   const {token, setToken, navigate, serverUrl} = useContext(jobContext);
-
+  const [showPassword, setShowPassword] = useState(false);
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [categories, setCategories] = useState("");
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  }
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
@@ -52,6 +61,7 @@ const Login = () => {
 
   return (
     <section className='fixed bg-white w-full top-0 border-t flex items-center justify-center px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
+      <ToastContainer/>
       <form onSubmit={onSubmitHandler}  className='border shadow-lg w-full sm:max-w-[30vw] mx-4 px-6 py-6'>
         <div className='flex items-center justify-center mb-6'>
             <h2 className='text-xl font-medium'>{currentState}</h2>
@@ -64,8 +74,19 @@ const Login = () => {
             }
 
             <input type='email' placeholder='Your email' required onChange={(e)=>setEmail(e.target.value)} value={email}  className='px-2 py-[6px] w-full border outline-none bg-gray-50'/>
-
-            <input type='password' placeholder='password' required name='password' onChange={(e)=>setPassword(e.target.value)} value={password}className='px-2 py-[6px] w-full border outline-none bg-gray-50'/>
+            
+            <div className='relative'>
+              <input type={showPassword ? 'text' : 'password'} placeholder='password' required name='password' onChange={(e)=>setPassword(e.target.value)} value={password} className=' px-2 py-[6px] w-full border outline-none bg-gray-50'/>
+              <span
+                onClick={togglePasswordVisibility}
+                className='cursor-pointer text-slate-700 absolute top-[50%] right-[10px] translate-y-[-50%]'
+              >
+                {showPassword ? 
+                  <AiOutlineEye/>:
+                  <AiOutlineEyeInvisible/>
+                }
+              </span>
+            </div>
         </div>
         {currentState === 'Sign Up' ? 
             <div className='flex items-start gap-2 my-3'>
