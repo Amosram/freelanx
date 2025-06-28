@@ -1,4 +1,5 @@
 import ceoImg from '../assets/images/ceo-img.png';
+import ctoImg from '../assets/images/cto-img.png';
 import brand_1 from '../assets/images/safaricom.png'
 import brand_2 from '../assets/images/facebook.svg'
 import brand_3 from '../assets/images/amazon.svg'
@@ -19,6 +20,7 @@ let formatedDate = `${day}/${month}/${year}`
 
 export const assets = {
     ceoImg,
+    ctoImg,
     brand_1,
     brand_2,
     brand_3,

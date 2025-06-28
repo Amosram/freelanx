@@ -79,7 +79,7 @@ const Contact = () => {
                 <MdEmail className='bg-white shadow-md border w-10 h-10 p-2 rounded-full'/>
                 <div>
                   <p className='font-medium'>Email</p>
-                  <p className='text-sm text-slate-600'>freelanxo@gamil.com</p>
+                  <p className='text-sm text-slate-600'>freelanx@gmail.com</p>
                 </div>
               </div>
             </div>
